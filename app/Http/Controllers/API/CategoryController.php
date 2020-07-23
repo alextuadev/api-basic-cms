@@ -27,8 +27,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Category::create($request->all());
-        return response()->json($post, 201);
+        $category = Category::create($request->all());
+        return response()->json($category, 201);
     }
 
     /**
