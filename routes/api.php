@@ -25,3 +25,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('categories', 'API\CategoryController');
 
 Route::apiResource('posts', 'API\PostController');
+
+Route::group(['prefix' => 'auth'], function () {
+    Route::post('login', 'API\LoginController@login')->name('login');
+});
