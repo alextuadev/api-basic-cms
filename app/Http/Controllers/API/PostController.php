@@ -62,6 +62,16 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $user = request()->user();
+        $deleted = Post::query()
+                ->where('owner_id', $user->id)
+                ->where('id', $post->id)
+                ->delete();
+
+        if($deleted)
+            return response()->json(null,204);
+
+        return response()->json(['message' => "You can't delete this post because you aren't owner this"],403);
+
     }
 }
