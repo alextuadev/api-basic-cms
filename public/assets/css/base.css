@@ -1,0 +1,39 @@
+/**
+Colors:
+1b262c
+0f4c75
+3282b8
+bbe1fa
+
+028090  //turquesa
+d62828 //red
+ */
+
+/*html, p, a {
+    font-family: 'Nunito', sans-serif;
+    color: #1b262c
+}*/
+a:hover{
+    text-decoration: none;
+}
+.post-item {
+    border-bottom: 1px dotted #999;
+    margin-bottom: 32px;
+}
+.post-item h3 a {
+    color: #05668d
+}
+.post-meta {
+    margin: 0;
+    padding: 8px 0;
+    font-size: .8em;
+    color: #999;
+}
+.post-image {
+    margin: 0 0 32px;
+}
+.header{
+    margin-bottom: 30px;
+    padding: 20px 0;
+    background: #028090;
+}
